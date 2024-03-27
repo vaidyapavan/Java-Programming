@@ -4,7 +4,7 @@ public class Binary_search {
 
     public static void main(String[] args) {
         int arr[] = {1, 7, 9, 45, 90, 100};
-        int val = 100;
+        int val = 9;
 
         int end = arr.length - 1; // Initialize end to the last index of the array
         int start = 0;
