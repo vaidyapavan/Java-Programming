@@ -21,7 +21,7 @@ public class Method_overloading {
 		overloading s= new overloading();
 		 //int result=s.add(8, 9);//         call to first method
 		
-		int result=s.add(8, 9,90);
+		int result=s.add(8, 9,90); // call to second method
 		 
 		 System.out.println("sum is:"+result);
 		
