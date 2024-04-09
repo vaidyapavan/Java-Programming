@@ -1,8 +1,10 @@
 package DSA;
 
-public class linkedlist {
+import DSA.linkedlist.node;
+
+public class Linkedlist1 {
 	int size;
-	linkedlist()
+	Linkedlist1()
 	{
 		this. size=0;
 	}
