@@ -1,0 +1,61 @@
+package DSA;
+
+public class linkedlist {
+    node head;
+
+    class node {
+        String data;
+        node next;
+
+        node(String data) {
+            this.data = data;
+            this.next = null;
+        }
+    }
+
+    // add at head
+    public void addFirst(String data) {
+        node newnode = new node(data);
+        if (head == null) {
+            head = newnode;
+        } else {
+            newnode.next = head;
+            head = newnode;
+        }
+    }
+
+    // add at tail
+    public void addLast(String data) {
+        node newnode = new node(data);
+        if (head == null) {
+            head = newnode;
+        } else {
+            node currnode = head;
+            while (currnode.next != null) {
+                currnode = currnode.next;
+            }
+            currnode.next = newnode;
+        }
+    }
+
+    // print node
+    void PrintList() {
+        if (head == null) {
+            System.out.println("Linked list is empty");
+        } else {
+            node currnode = head;
+            while (currnode != null) {
+                System.out.print(currnode.data + "->");
+                currnode = currnode.next;
+            }
+            System.out.println("Null");
+        }
+    }
+
+    public static void main(String[] args) {
+        linkedlist obj = new linkedlist();
+        obj.addFirst("A");
+        obj.addFirst("is");
+        obj.PrintList();
+    }
+}
