@@ -28,6 +28,10 @@ class sortExample
     void show() {
         System.out.println("ArrayList after sorting is::");
         System.out.println(arr);
+        Collections.sort(arr, Collections.reverseOrder());
+        System.out.println("sorting in reverse order is:");
+        System.out.println(arr);
+        
     }
 }
 
