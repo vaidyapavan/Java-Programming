@@ -1,0 +1,27 @@
+package dsa;
+
+abstract class ParentClass {
+   // abstract void fact(); // Corrected abstract method declaration
+
+    ParentClass() {
+        System.out.println("This is parent class");
+    }
+}
+
+class Child extends ParentClass {
+    void fact() {
+        int no = 5;
+        int factorial = 1;
+        for (int i = 1; i <= no; i++) {
+            factorial = factorial * i;
+        }
+        System.out.println("Factorial of " + no + " is: " + factorial);
+    }
+}
+
+public class Abstract_method_example{
+    public static void main(String[] args) {
+        Child childObj = new Child();
+        childObj.fact(); // Calling the fact method
+    }
+}
