@@ -1,0 +1,28 @@
+package dsa;
+
+
+
+class constructor_example
+{
+	constructor_example(int n)
+	{
+		n=10;
+		System.out.println("This is the fire constructor of this class");
+	}
+	constructor_example()
+	{
+		System.out.println("This is the second  constructor of this class");
+		System.out.println("this is called as constructor overloading");
+	}
+	
+	
+}
+public class constructor_onerloading {
+
+	public static void main(String[] args) {
+		constructor_example obj =new constructor_example();
+		
+
+	}
+
+}
