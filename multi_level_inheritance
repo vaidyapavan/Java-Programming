@@ -1,0 +1,49 @@
+package dsa;
+
+
+
+class parent
+{
+	 String name="Pavan";
+	parent()
+	{
+		
+		  
+		 
+		System.out.println("This is the parent class");
+		
+	}	
+	
+}
+class child1 extends parent
+{
+	
+	 String sub="Math";
+	child1()
+	{
+		System.out.println("My name is: "+name);
+	}
+	
+}
+
+class child2 extends child1
+{
+	
+	child2()
+	{
+		System.out.println("My favourite subject is: "+sub);
+	}
+}
+public class Inheritance_in_java {
+
+	public static void main(String[] args) {
+		System.out.println("This is the example of multelevel inheritance");
+		parent obj = new parent();
+		 child1 obj2= new  child1();
+		 child2 obj3= new  child2();
+		 
+		
+
+	}
+
+}
