@@ -1,0 +1,27 @@
+package dsa;
+
+
+
+class concate_string
+{
+	void concate()
+	{
+		String fname="Pavan";
+		String lname="Vaidya";
+		
+		String full_name;
+		full_name= fname+" "+lname;
+		
+		System.out.println("my full name is: "+ full_name);
+	}
+}
+public class Concatation_of_string {
+
+	public static void main(String[] args) {
+		concate_string obj = new concate_string();
+		obj.concate();
+		
+
+	}
+
+}
