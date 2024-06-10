@@ -1,0 +1,32 @@
+package Basic_java.copy;
+import java.util.Scanner;
+
+import java.io.*;
+import java.util.*;
+
+abstract class Book {
+    String title;
+    abstract void setTitle(String s);
+    String getTitle() {
+        return title;
+    }
+}
+
+class Main extends Book {
+    void setTitle(String s) {
+        title = s;
+    }
+    
+    String getTitle() {
+        System.out.println("The title is: " + title);
+        return title;
+    }
+}
+
+public class Abstract_class {
+    public static void main(String[] args) {
+        Main obj = new Main();
+        obj.setTitle("A tale of two cities");
+        obj.getTitle();
+    }
+}
