@@ -1,0 +1,30 @@
+package Java;
+
+
+
+
+class parent
+{
+	void method1()
+	{
+		System.out.println("This is the method1 in the parent class");
+	}
+}
+
+class child extends parent
+{
+	 void method1()
+	 {
+		 System.out.println("This is the method1 in the child class");
+		 System.out.println("here method 1 of parent class is overriden by method1 function  of child class");
+	 }
+}
+public class Method_overriding {
+
+	public static void main(String[] args) {
+		child obj = new child();
+		obj.method1();
+		
+	}
+
+}
