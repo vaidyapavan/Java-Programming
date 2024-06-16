@@ -1,0 +1,27 @@
+import java.math.BigInteger;
+import java.util.Scanner;
+
+class Result {
+    void bigint(BigInteger[] arr) {
+        BigInteger sum = BigInteger.ZERO; // Initialize sum as BigInteger.ZERO
+        for (int i = 0; i < arr.length; i++) {
+            sum = sum.add(arr[i]); // Use BigInteger's add method
+        }
+        System.out.println(sum);
+    }
+}
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        int n = s.nextInt();
+        BigInteger[] arr = new BigInteger[n];
+        
+        for (int i = 0; i < n; i++) {
+            arr[i] = s.nextBigInteger(); // Use nextBigInteger() to read BigInteger input
+        }
+        
+        Result obj = new Result();
+        obj.bigint(arr); // Pass the array directly
+    }
+}
