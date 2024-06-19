@@ -1,0 +1,22 @@
+import java.io.*;
+import java.math.BigInteger;
+import java.util.Scanner;
+
+class Result {
+
+    public static void extraLongFactorials(int n) {
+        BigInteger fact = BigInteger.ONE;
+        for (int i = 1; i <= n; i++) {
+            fact = fact.multiply(BigInteger.valueOf(i));
+        }
+        System.out.println(fact);
+    }
+}
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        int n = s.nextInt();
+        Result.extraLongFactorials(n);
+    }
+}
