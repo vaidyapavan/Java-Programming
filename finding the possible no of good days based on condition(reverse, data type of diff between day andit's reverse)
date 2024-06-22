@@ -1,0 +1,54 @@
+import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.function.*;
+import java.util.regex.*;
+import java.util.stream.*;
+import static java.util.stream.Collectors.joining;
+import static java.util.stream.Collectors.toList;
+
+
+class Result {
+
+    public static int toCheckReverse(int num) {
+        int reversed = 0;
+        while (num != 0) {
+            int rem = num % 10;
+            reversed = reversed * 10 + rem;
+            num = num / 10;
+        }
+        return reversed;
+    }
+
+    public static boolean isInteger(int diff, int k) {
+        return diff % k == 0;
+    }
+
+    public static int beautifulDays(int start, int end, int k) {
+        int count = 0;
+        for (int i = start; i <= end; i++) {
+            int reverse = toCheckReverse(i);
+            int diff = Math.abs(i - reverse);
+
+            if (isInteger(diff, k)) {
+                count++;
+            }
+        }
+        return count;
+    }
+}
+
+public class Solution {
+    public static void main(String[] args) throws IOException {
+        Scanner s = new Scanner(System.in);
+        int start = s.nextInt();
+        int end = s.nextInt();
+        int k = s.nextInt();
+
+        int result = Result.beautifulDays(start, end, k);
+        System.out.println(result);
+    }
+}
