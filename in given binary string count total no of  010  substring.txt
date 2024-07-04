@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+class Result {
+    void beautifulBinaryString(String str) {
+        int count = 0;
+        for (int i = 0; i <= str.length() - 3; i++) {
+            if (str.charAt(i) == '0' && str.charAt(i + 1) == '1' && str.charAt(i + 2) == '0') {
+                count++;
+                i += 2; // Move to the next character after the pattern to avoid overlaps
+            }
+        }
+        System.out.println(count);
+    }
+}
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        int n = s.nextInt();
+        String str = s.next();
+        Result obj = new Result();
+        obj.beautifulBinaryString(str);
+    }
+}
