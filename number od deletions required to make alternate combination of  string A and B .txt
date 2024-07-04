@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+class Result {
+    void alternatingCharacters(String str) {
+        int deletions = 0;
+        char lastChar = str.charAt(0);
+
+        for (int i = 1; i < str.length(); i++) {
+            char currentChar = str.charAt(i);
+            if (currentChar == lastChar) {
+                deletions++;
+            } else {
+                lastChar = currentChar;
+            }
+        }
+
+        System.out.println(deletions);
+    }
+}
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner st = new Scanner(System.in);
+        int n = st.nextInt();
+        st.nextLine();  // Consume the newline character
+
+        Result obj = new Result();
+
+        for (int i = 0; i < n; i++) {
+            String str = st.nextLine();
+            obj.alternatingCharacters(str);
+        }
+
+        st.close();
+    }
+}
