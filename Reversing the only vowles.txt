@@ -1,0 +1,39 @@
+class Solution {
+    public String reverseVowels(String s) {
+        
+        char[] arr = s.toCharArray();
+        
+        String vowels = "aeiouAEIOU";
+        // Initialize two pointers
+        int left = 0, right = arr.length - 1;
+
+        while (left < right) {
+            
+            while (left < right && vowels.indexOf(arr[left]) == -1) {
+                left++;
+            }
+        
+            while (left < right && vowels.indexOf(arr[right]) == -1) {
+                right--;
+            }
+            // Swap the vowels
+            if (left < right) {
+                char temp = arr[left];
+                arr[left] = arr[right];
+                arr[right] = temp;
+                left++;
+                right--;
+            }
+        }
+
+        // Convert the character array back to a string and return it
+        return new String(arr);
+    }
+
+    public static void main(String[] args) {
+        Solution solution = new Solution();
+        String input = "leetcode";
+        String output = solution.reverseVowels(input);
+        System.out.println(output);  // Output: "leotcede"
+    }
+}
