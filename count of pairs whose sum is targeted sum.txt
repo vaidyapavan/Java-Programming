@@ -1,0 +1,22 @@
+class Solution {
+    public int maxOperations(int[] nums, int k) {
+        int n = nums.length;
+        int count = 0;
+        for (int i = 0; i < n; i++) {
+            for (int j = i + 1; j < n; j++) {
+                if (nums[i] + nums[j] == k) {
+                    count++;
+                }
+            }
+        }
+        System.out.println(count);
+        return count; // This should return the count instead of 0
+    }
+
+    public static void main(String[] args) {
+        int nums[] = {1, 2, 3, 4};
+        int k = 5;
+        Solution obj = new Solution();
+        obj.maxOperations(nums, k);
+    }
+}
