@@ -1,0 +1,45 @@
+package dsa;
+import java.util.*;
+
+
+
+public class Greatest_number {
+	
+	void check_greatest_number(int a, int b, int c)
+	{
+		if(a > b && a > c)
+		{
+			System.out.println("Greatest nimbe ris:"+ a);
+		}
+		else if(b > a && b > c)
+		{
+			System.out.println("Greatest nimber is:"+ b);
+		}
+		else if(c > a && c > b)
+		{
+			System.out.println("Greatest nimber is:"+ c);
+		}
+		else
+		{
+			System.out.println("All numbers are equals");
+			
+		}
+	}
+
+	public static void main(String[] args) {
+		Scanner s= new Scanner(System.in);
+		System.out.println("Enter the first number");
+		int a=s.nextInt();	
+		System.out.println("Enter the second number");
+		int b=s.nextInt();	
+		System.out.println("Enter the third number");
+		int c=s.nextInt();		
+		 Greatest_number obj= new  Greatest_number();
+		 
+		 obj.check_greatest_number(a,b,c);
+
+
+
+	}
+
+}
