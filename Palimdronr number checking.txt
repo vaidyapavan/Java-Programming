@@ -1,0 +1,45 @@
+package dsa;
+import java.util.*;
+class Palimdrone
+{
+	void checkPalimdrone(int no)
+	{
+		int originalNumber=no;
+		int reverse=0;
+		while(no > 0)
+		{
+			
+			int reminder= no % 10;
+			reverse= reverse*10 + reminder;
+			no=no/10;
+			
+		}
+		
+		if(originalNumber == reverse)
+		{
+			System.out.println(originalNumber +" is Palimbrone number");
+		}
+		else
+		{
+			System.out.println(originalNumber +" is  not Palimbrone number");
+		}
+		
+		
+	}
+}
+public class Palimdrone_number {
+
+	
+	public static void main(String[] args) {
+		Scanner s= new Scanner(System.in);
+		System.out.println("Enter the number");
+		int no=s.nextInt();
+		Palimdrone obj= new Palimdrone();
+		obj.checkPalimdrone(no);
+		
+		
+		
+
+	}
+
+}
