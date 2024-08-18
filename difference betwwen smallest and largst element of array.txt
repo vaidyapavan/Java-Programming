@@ -1,0 +1,42 @@
+package dsa;
+import java.util.*;
+
+
+class difference
+{
+	int Difference(int arr[])
+	{
+		int n= arr.length;
+		int max= Integer.MIN_VALUE;
+		int min= Integer.MAX_VALUE;
+		for(int i=0;i<n;i++)
+		{
+			if(arr[i] > max)
+			{
+				max = arr[i];
+			}
+			 
+			if(arr[i] < min)
+			{
+				min = arr[i];
+			}
+			
+		}
+		
+		int diff= max - min;
+		return diff;
+		
+	}
+}
+public class Diff_betweem_lardest_smallest_in_array {
+
+	public static void main(String[] args) {
+		difference obj = new difference();
+		int arr[]= {1,2,3,4,5,6,7,8,9,100};
+		int result = obj.Difference( arr);
+		System.out.println("Difference between largest and smallest number is: "+result);
+		
+
+	}
+
+}
