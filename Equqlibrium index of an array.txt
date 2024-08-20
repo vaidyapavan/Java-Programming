@@ -1,0 +1,55 @@
+package dsa;
+
+class Equilibrium_index
+{
+	void equalibrium(int arr[])
+	{
+		int n = arr.length;
+		
+		int count=0;
+		for(int i=1; i<n-1; i++) {
+			
+			int left_sum = 0;
+			int right_sum=0;
+			for(int j=i-1; j>=0;j--)
+			{
+				left_sum = left_sum + arr[j];
+			
+			}
+			for(int k=i+1; k<n;k++)
+			{
+				right_sum = right_sum + arr[k];
+	
+				
+			}
+			
+			if(right_sum == left_sum)
+			{
+				System.out.println("Equalibrum index is: "+ i );
+				count++;
+				break;
+			}
+
+			
+		}
+		if(count ==0)
+		{
+			System.out.println(" There is no equalibrium index in the given array");
+			
+		}
+		
+		
+		
+	}
+}
+public class Equilibrium_index_of_array {
+
+	public static void main(String[] args) {
+		int arr[] = {1,2,3,4,5,4,4,2};
+		 Equilibrium_index obj = new  Equilibrium_index();
+		 obj.equalibrium(arr);
+		
+		
+	}
+
+}
