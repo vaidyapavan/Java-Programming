@@ -1,0 +1,23 @@
+package dsa;
+
+public class Finding_letter_at_kth_index {
+
+    public static void main(String[] args) {
+        
+        String str = "a2b2c4";
+        int k = 5;
+        int sum = 0;
+
+        for(int i = 0; i < str.length(); i++) {
+            if(i % 2 != 0) {  // Digit position
+                int count = str.charAt(i) - '0';  // Convert char digit to integer 
+                sum += count;
+
+                if(sum >= k) {
+                    System.out.println(str.charAt(i - 1));  // Corresponding letter
+                    break;
+                }
+            }
+        }
+    }
+}
