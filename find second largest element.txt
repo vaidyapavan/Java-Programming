@@ -1,0 +1,29 @@
+package java_programming;
+
+public class second_largest_element {
+
+	public static void main(String[] args) {
+		int arr[] = {12,5,6,89,26,8,10,90,100}; 
+		int largest = Integer.MIN_VALUE;
+		int second_largest = Integer.MIN_VALUE;
+		
+		int n= arr.length;
+		for(int i=0; i<n; i++)
+		{
+			if(arr[i] > largest)
+			{
+				second_largest = largest;
+				largest = arr[i];
+				
+			}
+			else if(arr[i] != largest &&  arr[i] > second_largest )
+			{
+				second_largest = arr[i];
+			}
+		}
+		System.out.println(" second largest element is: "+second_largest);
+		
+
+	}
+
+}
