@@ -1,0 +1,48 @@
+import java.util.Scanner;
+
+class Result {
+
+    // Method to check if two strings share a common substring
+    String twoStrings(String s1, String s2) {
+        String a = "YES";
+        String b = "NO";
+        
+        // Convert both strings to character arrays
+        char arr1[] = s1.toCharArray();
+        char arr2[] = s2.toCharArray();
+        
+        int n1 = arr1.length;
+        int n2 = arr2.length;
+
+        // Nested loop to check for common characters
+        for (int i = 0; i < n1; i++) {
+            for (int j = 0; j < n2; j++) {
+                if (arr1[i] == arr2[j]) {
+                    return a;  
+                }
+            }
+        }
+        
+        return b;  
+    }
+}
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        int t = s.nextInt();  // Read number of test cases
+        s.nextLine();  // Consume the leftover newline after nextInt()
+
+        for (int i = 0; i < t; i++) {
+            Result obj = new Result();
+            
+            String s1 = s.nextLine();  // Read first string
+            String s2 = s.nextLine();  // Read second string
+            
+            String result = obj.twoStrings(s1, s2);
+            System.out.println(result);  // Output the result
+        }
+
+        s.close();
+    }
+}
