@@ -1,0 +1,37 @@
+package java_programming;
+
+
+
+class second_smallest
+{
+	int smallest(int arr[])
+	{
+		int n = arr.length-1;
+		for(int i=0; i<n; i++)
+		{
+			for(int j=0; j<n; j++ )
+			{
+				if(arr[j]>arr[j+1])
+				{
+					int temp = arr[j];
+					arr[j] = arr[j+1];
+					arr[j+1] = temp;
+				}
+			}
+		}
+		return arr[n-1];
+		
+	}
+}
+public class Second_smallest_number_in_array {
+
+	public static void main(String[] args) {
+		
+		int arr[] = {5,8,9,23,54,6,7,8,12,4,5,90,100};
+		second_smallest obj = new second_smallest();
+		int result = obj.smallest( arr);
+		System.out.println("second smallest element of an array is:"+ result);
+		
+	}
+
+}
