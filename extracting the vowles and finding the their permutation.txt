@@ -1,0 +1,60 @@
+package java_programming;
+
+
+class Vowles
+{
+	void vowles(String str)
+	{
+		int length = str.length();
+		char vowles_arr[] = new char[length];
+		int index = -1;
+		for(int i=0; i<length;i++)
+		{
+			if(str.charAt(i) =='a' ||str.charAt(i) == 'e' ||str.charAt(i) == 'i' ||str.charAt(i) == 'o' ||str.charAt(i) == 'u')
+			{
+				index++;
+				vowles_arr[index] = str.charAt(i);
+				
+			}
+		}
+		
+		permutation(vowles_arr,index);
+		
+		
+	}
+	void permutation(char[] vowles_arr,int index)
+	{
+		for(int i=0; i<index+1;i++)
+		{
+			for(int j=0; j<=index+1; j++)
+			{
+				for(int k=0;k<=j;k++)
+				{
+					System.out.print(vowles_arr[k]);
+				}
+				System.out.print(",");
+				
+			}
+			
+			
+		}
+		int noOFPermutation = index*(index+1)/2;
+		System.out.println(noOFPermutation);
+		
+	}
+}
+public class Vowles_permutation {
+
+	public static void main(String[] args) {
+		
+		String str = "accenture";
+		Vowles obj = new Vowles();
+		obj.vowles(str);
+		
+		
+				
+		
+
+	}
+
+}
