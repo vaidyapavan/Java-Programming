@@ -1,0 +1,44 @@
+package java_programming;
+
+
+
+class Shuffling {
+    void shuffle(int arr[]) {
+        int n = arr.length;
+        int temp[] = new int[n]; 
+
+        int j = n / 2; 
+        int index = 0; 
+        
+       
+        for (int i = 0; i < n / 2; i++, j++) {
+            temp[index++] = arr[i]; 
+            temp[index++] = arr[j];
+        }
+        
+        // Copy the shuffled elements back into the original array
+        for (int i = 0; i < n; i++) {
+            arr[i] = temp[i];
+        }
+
+        // Print the shuffled array
+        for (int k = 0; k < n; k++) {
+            System.out.print(arr[k] + " ");
+        }
+    }
+}
+
+public class Shuffling_the_Array {
+    public static void main(String[] args) {
+        Shuffling obj = new Shuffling();
+        int arr[] = {12, 90, 5, 100, 6, 89, 26, 10, 90, 100};
+        System.out.println("Original array is: ");
+        for(int i=0 ;i<arr.length;i++)
+        {
+            System.out.print(arr[i]+",");
+        	
+        }
+        System.out.println();
+        obj.shuffle(arr);
+    }
+}
