@@ -1,0 +1,45 @@
+package java_programming;
+
+import  java.util.*;
+
+class Check
+{
+	void operation(int no)
+	{
+		int result = 0;
+		if( no >=10 && no%2 !=0)
+		{
+			result = no/2;
+		}
+		
+		else if(no >= 10 && no%2 == 0)
+		{
+			result = (no-2)/2;
+		}
+		
+		else
+		{
+			result = no;
+		}
+		
+		System.out.println(result);
+		
+		
+		
+	}
+}
+public class ArithmaticProblem {
+
+	public static void main(String[] args) {
+		
+		Scanner s = new Scanner(System.in);
+		System.out.println("Enter the number");
+		int no = s.nextInt();
+		 Check obj = new  Check();
+		 obj.operation(no);
+		
+
+
+	}
+
+}
