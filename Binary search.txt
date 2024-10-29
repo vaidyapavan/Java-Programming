@@ -1,0 +1,41 @@
+package Accenture;
+
+import java.util.Arrays;
+
+class Binary {
+    int search(int arr[]) {
+      
+        Arrays.sort(arr);
+
+        int n = arr.length;
+        int start = 0;
+        int end = n - 1;
+        int target = 34;
+
+        while (start <= end) {
+            int mid = (start + end) / 2;
+
+            if (arr[mid] == target) {
+                
+                return mid;
+            } else if (arr[mid] < target) {
+                start = mid + 1;
+            } else {
+                end = mid - 1;
+            }
+        }
+
+        // If the loop ends and no element is found
+        System.out.println("Target not found.");
+        return -1;
+    }
+}
+
+public class BinarySearch {
+    public static void main(String[] args) {
+        int arr[] = {12, 5, 43, 67, 89, 45, 6, 34, 2, 89};
+        Binary obj = new Binary();
+       int result =  obj.search(arr);
+       System.out.println("Target found at index: " + result);
+    }
+}
