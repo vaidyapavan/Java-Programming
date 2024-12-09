@@ -1,0 +1,38 @@
+package Basic_DSA;
+
+public class SecondSmallestNUmber {
+	
+	
+	static int second_smallest_number()
+	{
+        int arr[] = {2,89, 10,40,100,45,78,99};
+		
+		int n= arr.length;
+		
+		int smallestElement = Integer.MAX_VALUE;
+		int secondSmallestElement = Integer.MAX_VALUE;
+		
+		for(int i=0 ;i<n; i++)
+		{
+			if(arr[i] < smallestElement)
+			{
+				secondSmallestElement = smallestElement;
+				smallestElement = arr[i]; 
+			}
+			else if(arr[i] < secondSmallestElement  && arr[i] > smallestElement)
+			{
+				secondSmallestElement = arr[i];
+			}
+			
+		}
+		return secondSmallestElement;
+	}
+	
+	public static void main (String args[])
+	{
+		 int result = SecondSmallestNUmber .second_smallest_number();
+		 System.out.println("seconf small  element is:"+ result);
+		
+	}
+
+}
