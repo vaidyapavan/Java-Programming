@@ -1,0 +1,74 @@
+package java_programming;
+
+
+class ValidCount
+{
+	int count(String str)
+	{
+		str = str.trim();
+		str= str.toLowerCase();
+		String arr[] = str.split(" ");
+		int n = arr.length;
+		
+		
+		int valid_word_count = 0;
+		for(int i=0; i<n;i++)
+		{
+			int length = arr[i].length();
+			
+			
+			int vowel_count = 0;
+			int consonant_count = 0;
+			int numeric_count = 0;
+			for(int j=0; j<length;j++)
+			{
+				
+				
+				if(arr[i].charAt(j)=='a'|| arr[i].charAt(j)=='e'|| arr[i].charAt(j)=='i'|| arr[i].charAt(j)=='o'|| arr[i].charAt(j)=='u')
+				{
+					vowel_count++;
+					
+				}
+				
+				if(arr[i].charAt(j) >='1' && arr[i].charAt(j)<='9')
+				{
+					numeric_count++;
+				}
+				
+				if(arr[i].charAt(j) >'a' && arr[i].charAt(j)<'z')
+				{
+					consonant_count++;
+				}
+			}
+	
+		
+			
+			if(vowel_count >=2 && consonant_count>=2 &&  numeric_count>=2 )
+			{
+				 valid_word_count++;
+			}
+			
+		}
+		
+		return  valid_word_count;
+		
+		
+		
+	}
+}
+
+
+public class Counting_valid_words {
+	
+	public static void main(String args[])
+	{
+		String str = "pav123ana vaidya mahar123ashtra";
+		ValidCount obj = new ValidCount();
+		int result  = obj.count(str);
+		System.out.println("Numer of valid worda are");
+		System.out.println(result);
+		
+		
+	}
+
+}
